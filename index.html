@@ -18,52 +18,58 @@
   </style>
 </head>
 <body>
-  <header>
-    <h2>SPLI<br>TTER</h2>
-  </header>
-  <main class="content">
-    <div class="content__div">
-      <label for="bill">Bill</label>
-      <input type="number" class="input input__field input__field--bill" name="bill">
-    </div>
-    <div class="content__div">
-      <label for="bill">Select Tip %</label>
-      <div class="groupe-input-select">
-        <input type="button" class="input input__select input__select--value" value="5%" >
-        <input type="button" class="input input__select input__select--value" value="10%" disabled>
-        <input type="button" class="input input__select input__select--value" value="15%" disabled>
-        <input type="button" class="input input__select input__select--value" value="25%"  disabled>
-        <input type="button" class="input input__select input__select--value" value="50%" disabled>
-        <input type="number" class="input input__select input__field input__field--custom" placeholder="Custom">
-      </div>
-    </div>
-    <div class="content__div">
-      <label for="">Number of People</label>
-      <input type="number" class="input input__field input__field--people">
-    </div>
-    <div class="content__div--total">
-      <div class="total">
-        <div class="total__amount">
-          <p class="title-total">Tip Amount</p>
-          <p class="per-person">/ person</p>
+    <header>
+      <h2>SPLI<br>TTER</h2>
+    </header>
+    <main class="content">
+      <div class="content--desktop-left">
+        <div class="content__div">
+          <label for="bill">Bill</label>
+          <input type="number" class="input input__field input__field--bill" name="bill">
         </div>
-        <p class="amount-per-person">$4.27</p>
-      </div>
-      <div class="total">
-        <div class="total__amount">
-          <p class="title-total">Total</p>
-          <p class="per-person">/ person</p>
+        <div class="content__div">
+          <label for="bill">Select Tip %</label>
+          <div class="groupe-input-select">
+            <input type="button" class="input input__select input__select--value" value="5%" >
+            <input type="button" class="input input__select input__select--value" value="10%">
+            <input type="button" class="input input__select input__select--value" value="15%">
+            <input type="button" class="input input__select input__select--value" value="25%" >
+            <input type="button" class="input input__select input__select--value" value="50%">
+            <input type="number" class="input input__select input__field input__field--custom" placeholder="Custom">
+          </div>
         </div>
-        <p class="amount-per-person">$32.27</p>
+        <div class="content__div">
+          <label for="">Number of People <span>Can't be zero</span></label>
+          <input type="number" class="input input__field input__field--people">
+        </div>
       </div>
-      <button class="btn">RESET</button>
-    </div>
-  </main>
+      <div class="content--desktop-right">
+        <div class="content__div--total">
+          <div class="resume__amount">
+            <div class="total">
+              <div class="total__amount">
+                <p class="title-total">Tip Amount</p>
+                <p class="per-person">/ person</p>
+              </div>
+              <p class="amount-per-person">$4.27</p>
+            </div>
+            <div class="total">
+              <div class="total__amount">
+                <p class="title-total">Total</p>
+                <p class="per-person">/ person</p>
+              </div>
+              <p class="amount-per-person">$32.27</p>
+            </div>
+
+          </div>
+          <div class="div__btn">
+            <button class="btn">RESET</button>
+          </div>
+        </div>
+      </div>
+    </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+
 
   <script src="script.js"></script>
 </body>
