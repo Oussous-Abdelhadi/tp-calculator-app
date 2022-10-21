@@ -79,13 +79,13 @@ nb_per.addEventListener('keyup', function () {
 
 
 var total_per_tip;
-
+var input_s;
 
 function calcul() {
     var total = Math.abs((price_value / nb_per_value).toFixed(2));
     
     if (isNaN(total) || total == Infinity) {
-        this.document.querySelector('.amount-per-person--total').innerHTML = `$0`;
+        this.document.querySelector('.amount-per-person--total').innerHTML = `$0.00`;
     }
     else {
         this.document.querySelector('.amount-per-person--total').innerHTML = `$${total}`;
@@ -103,18 +103,18 @@ function calcul() {
     
         console.log(total_per_tip);
         if (isNaN(total_per_tip) || total_per_tip == Infinity ) {
-            this.document.querySelector('.amount-per-person--tip').innerHTML = `$0`;
+            this.document.querySelector('.amount-per-person--tip').innerHTML = `$0.00`;
         }
         else {
             this.document.querySelector('.amount-per-person--tip').innerHTML = `$${total_per_tip}`;
         }
         }
         else {
-            var input_s =  Math.abs((input_select_value / 100))
+            input_s =  Math.abs((input_select_value / 100))
             total_per_tip =  Math.abs((total_per * input_s).toFixed(2));
             
-            if (isNaN(total_per_tip) || total_per_tip == Infinity) {
-                this.document.querySelector('.amount-per-person--tip').innerHTML = `$0`;
+            if (isNaN(total_per_tip) || total_per_tip == Infinity || total_per_tip == 0) {
+                this.document.querySelector('.amount-per-person--tip').innerHTML = `$0.00`;
             }
             else {
                 this.document.querySelector('.amount-per-person--tip').innerHTML = `$${total_per_tip}`;
@@ -138,7 +138,9 @@ reset.addEventListener('click', function () {
     input_select_value = null;
     nb_per_value = null;
     total_per = null;
-    input_s = null
+    total_per_tip = null;
+    total = null;
+    input_s = null;
 })
 
 window.addEventListener('keyup', calcul)
