@@ -164,9 +164,6 @@ label {
     width: 100%;
 }
 
-.btn:hover {
-    background-color: var(--Light-grayish-cyan);
-}
 
 span {
     color: rgb(248, 93, 93);
@@ -192,7 +189,7 @@ span {
     .content--desktop-left {
         width: 48%;
     }
-
+    
     .content--desktop-right {
         width: 48%;
         display: flex;
@@ -209,14 +206,18 @@ span {
     .input__select {
         width: 30%;
     }
-
+    
     .div__btn {
         display: flex;
         justify-content: center;
     }
-
+    
     .btn {
         width: 100%;
+    }
+    
+    .btn:hover {
+        background-color: var(--Light-grayish-cyan);
     }
 
 }
