@@ -18,11 +18,6 @@ var reset = document.querySelector('button');
 var total_per ;
 
 price.addEventListener('keyup', function () {
-    inputs_select.forEach(element => {
-                element.style.background = '';
-                element.style.color = '';
-    });
-
     price_value = document.querySelector('.input__field--bill').value;
 })
 
@@ -90,7 +85,7 @@ function calcul() {
     var total = Math.abs((price_value / nb_per_value).toFixed(2));
     
     if (isNaN(total) || total == Infinity) {
-        this.document.querySelector('.amount-per-person--total').innerHTML = `$`;
+        this.document.querySelector('.amount-per-person--total').innerHTML = `$0`;
     }
     else {
         this.document.querySelector('.amount-per-person--total').innerHTML = `$${total}`;
@@ -107,8 +102,8 @@ function calcul() {
         total_per_tip =  Math.abs((total_per * input_c).toFixed(2));
     
         console.log(total_per_tip);
-        if (isNaN(total_per_tip) || total_per_tip == Infinity) {
-            this.document.querySelector('.amount-per-person--tip').innerHTML = `$`;
+        if (isNaN(total_per_tip) || total_per_tip == Infinity ) {
+            this.document.querySelector('.amount-per-person--tip').innerHTML = `$0`;
         }
         else {
             this.document.querySelector('.amount-per-person--tip').innerHTML = `$${total_per_tip}`;
@@ -119,7 +114,7 @@ function calcul() {
             total_per_tip =  Math.abs((total_per * input_s).toFixed(2));
             
             if (isNaN(total_per_tip) || total_per_tip == Infinity) {
-                this.document.querySelector('.amount-per-person--tip').innerHTML = `$`;
+                this.document.querySelector('.amount-per-person--tip').innerHTML = `$0`;
             }
             else {
                 this.document.querySelector('.amount-per-person--tip').innerHTML = `$${total_per_tip}`;
@@ -141,8 +136,11 @@ reset.addEventListener('click', function () {
     price_value = null;
     input__custom_value = null;
     input_select_value = null;
-
+    nb_per_value = null;
+    total_per = null;
+    input_s = null
 })
+
 window.addEventListener('keyup', calcul)
 window.addEventListener('click', calcul)
 
